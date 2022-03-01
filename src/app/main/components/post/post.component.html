@@ -1,1 +1,31 @@
-<p></p>
+<div class="row card m-3 p-3">
+  <div class="col-12 row m-0 p-0">
+      <div class="col-12 col-sm-3 m-0 p-0 d-flex align-items-center justify-content-center">
+          <img class="img-thumbnail" [src]="publicacion.imgUrl ? publicacion.imgUrl : 'assets/img/calculadora.png' " alt="Coca-cola Vacational Management">
+      </div>
+
+      <div class="col-12 col-sm-9 row align-items-center p-4">
+          <h4 class="col-12 aplicacion">{{publicacion?.titulo}}</h4>
+
+          <!-- TODO: crear pipe para formatear la descripción -->
+          <p class="col-12">{{publicacion?.descripcion}}</p>
+          <div class="row">
+              <!-- <div class="row col">
+                  <div class="d-flex col-6 col-lg-auto likes">
+                      <a href="#"><img src="assets/img/like.png" alt="like"></a>
+                      <p>###</p>
+                  </div>
+
+                  <div class="d-flex col-6 col-lg-auto dislikes">
+                      <a href="#"><img src="assets/img/dislike.png" alt="dislike"></a>
+                      <p>##</p>
+                  </div>
+              </div> -->
+
+              <!-- TODO: crear pipe para formatear el autor -->
+              <p class="col-12 col-lg-auto fecha">Publicado: {{publicacion?.fecha | date: 'mediumDate'}} por {{publicacion?.autor}}</p>
+              <button type="button" class="btn btn-primary" [routerLink]="['/publicacion', publicacion?.id]">Leer más...</button>
+          </div>
+      </div>
+  </div>
+</div>

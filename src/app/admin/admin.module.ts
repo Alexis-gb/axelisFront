@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +8,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { PublicacionesComponent } from './pages/publicaciones/publicaciones.component';
 import { ComentariosComponent } from './pages/comentarios/comentarios.component';
 import { ReaccionesComponent } from './pages/reacciones/reacciones.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -17,11 +18,12 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     PublicacionesComponent,
     ComentariosComponent,
     ReaccionesComponent,
-    InicioComponent
+    MenuComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

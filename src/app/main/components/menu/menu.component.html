@@ -1,19 +1,27 @@
 <nav class="navbar">
   <div class="container-fluid text-center">
-      <a class="nav-item col-12 col-xl-auto m-3" href="index.html"><img src="../assets/img/Logotipo-90px.png" alt="Axelis logo"></a>
+    <a class="nav-item col-12 col-xl-auto m-3" routerLink="/inicio"><img src="../assets/img/Logotipo-90px.png" alt="Axelis logo"></a>
 
-      <ul class="nav nav-pills col m-3">
-          <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link active" routerLink="/inicio">Inicio</a></li>
-          <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/proyectos">Proyecto</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Desarrollos</a>
-            <ul class="dropdown-menu">
-              <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="dropdown-item" routerLink="/aplicaciones">Aplicaciones</a></li>
-              <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="dropdown-item" routerLink="/juegos">Juegos</a></li>
-            </ul>
-          </li>
-          <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/nosotros">Nosotros</a></li>
-          <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/contactanos">Contactanos</a></li>
-      </ul>
+    <ul class="nav nav-pills col m-3">
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/inicio" routerLinkActive="active">Inicio</a></li>
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/proyectos" routerLinkActive="active">Proyectos</a></li>
+      <li class="nav-item dropdown col-12 col-sm-4 col-xl-auto">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Desarrollos</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/aplicaciones" routerLinkActive="active">Aplicaciones</a></li>
+          <li><a class="dropdown-item" routerLink="/juegos" routerLinkActive="active">Juegos</a></li>
+        </ul>
+      </li>
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/nosotros" routerLinkActive="active">Nosotros</a></li>
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/contactanos" routerLinkActive="active">Contactanos</a></li>
+    </ul>
+
+    <ul class="nav nav-pills col m-3" *ngIf="admin ? false : verificado">
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/auth/ingreso">Ingreso</a></li>
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/auth/registro">Registro</a></li>
+    </ul>
+    <ul class="nav nav-pills col m-3" *ngIf="admin">
+      <li class="nav-item col-12 col-sm-4 col-xl-auto"><a class="nav-link" routerLink="/admin">Administración</a></li>
+    </ul>
   </div>
 </nav>

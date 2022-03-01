@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { FormRegistroComponent } from './components/form-registro/form-registro.component';
 import { FormIngresoComponent } from './components/form-ingreso/form-ingreso.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormIngresoComponent } from './components/form-ingreso/form-ingreso.com
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AuthRoutingModule
   ]
 })

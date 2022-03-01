@@ -1,5 +1,6 @@
-import { PublicacionesService } from './../../services/publicaciones.service';
 import { Component, OnInit } from '@angular/core';
+import { Publicacion } from 'src/app/interfaces/publicacion.interface';
+import { PublicacionesService } from 'src/app/services/publicaciones.service';
 
 @Component({
   selector: 'app-aplicaciones',
@@ -8,15 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AplicacionesComponent implements OnInit {
 
-  publicaciones:[] = [];
+  publicaciones:Publicacion[] = [];
 
   constructor(private publicacionService: PublicacionesService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.listarPublicaciones();
+  }
 
-  llamarpublicaciones() {
-    this.publicacionService.getPublicacionesPorSeccion("PROYECTOS").subscribe(resp =>{
-      console.log(resp);
+  listarPublicaciones() {
+    this.publicacionService.getPublicacionesPorSeccion("APLICACIONES").subscribe(resp =>{
+      this.publicaciones = resp;
     })
   }
 

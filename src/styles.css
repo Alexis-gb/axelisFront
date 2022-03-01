@@ -1,9 +1,13 @@
 body{
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(200, 200, 200);
 }
 
 .container{
   background-color: white;
+}
+
+h1{
+  text-align: center;
 }
 
 .axelis{
@@ -25,4 +29,8 @@ hr{
   background-color: transparent;
   border-top: dotted #3200C3;
   opacity: .8;
+}
+
+.sinborde{
+  border: none;
 }

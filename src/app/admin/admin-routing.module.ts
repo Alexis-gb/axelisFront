@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { HomeComponent } from './pages/home/home.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { PublicacionesComponent } from './pages/publicaciones/publicaciones.component';
 import { ComentariosComponent } from './pages/comentarios/comentarios.component';
@@ -14,16 +12,12 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'inicio',
-        component: InicioComponent
+        path: 'publicaciones',
+        component: PublicacionesComponent
       },
       {
         path: 'usuarios',
         component: UsuariosComponent
-      },
-      {
-        path: 'publicaciones',
-        component: PublicacionesComponent
       },
       {
         path: 'comentarios',
@@ -32,6 +26,10 @@ const routes: Routes = [
       {
         path: 'reacciones',
         component: ReaccionesComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'publicaciones'
       }
     ]
   }

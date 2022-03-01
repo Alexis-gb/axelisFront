@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Comentario } from 'src/app/interfaces/comentario.interface';
 
 @Component({
   selector: 'app-comentario',
   templateUrl: './comentario.component.html',
   styleUrls: ['./comentario.component.css']
 })
-export class ComentarioComponent implements OnInit {
+export class ComentarioComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() comentario!:Comentario;
 
 }

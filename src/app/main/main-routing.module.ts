@@ -1,3 +1,4 @@
+import { PublicacionComponent } from './pages/publicacion/publicacion.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+      {
+        path: '',
+        component: InicioComponent
+      },
       {
         path: 'inicio',
         component: InicioComponent
@@ -37,6 +42,14 @@ const routes: Routes = [
       {
         path: 'contactanos',
         component: ContactanosComponent
+      },
+      {
+        path: 'publicacion/:id',
+        component: PublicacionComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'inicio'
       }
     ]
   },

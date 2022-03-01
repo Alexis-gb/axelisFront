@@ -12,6 +12,8 @@ import { ContactanosComponent } from './pages/contactanos/contactanos.component'
 import { MenuComponent } from './components/menu/menu.component';
 import { PostComponent } from './components/post/post.component';
 import { ComentarioComponent } from './components/comentario/comentario.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PublicacionComponent } from './pages/publicacion/publicacion.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ComentarioComponent } from './components/comentario/comentario.componen
     ContactanosComponent,
     MenuComponent,
     PostComponent,
-    ComentarioComponent
+    ComentarioComponent,
+    FooterComponent,
+    PublicacionComponent
   ],
   imports: [
     CommonModule,

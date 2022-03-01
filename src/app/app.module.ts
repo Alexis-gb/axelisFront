@@ -1,5 +1,4 @@
 import { HttpClientModule } from '@angular/common/http';
-import { PublicacionesService } from './main/services/publicaciones.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,12 +11,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [
-    PublicacionesService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
